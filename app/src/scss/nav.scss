@@ -1,0 +1,8 @@
+/* ======================================================
+  Nav
+========================================================= */
+// Lighten background of <a> element on hover
+a:hover.bg-hover {
+  background-color: lighten(steelblue, 10%);
+}
+

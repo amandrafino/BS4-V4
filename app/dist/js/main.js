@@ -1,0 +1,3 @@
+document.write("<p>My Name is Albert Anthony Mandrafino</p>");
+document.write("My wife's name is Gail Mandrafino");
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImRvY3VtZW50LndyaXRlKFwiPHA+TXkgTmFtZSBpcyBBbGJlcnQgQW50aG9ueSBNYW5kcmFmaW5vPC9wPlwiKTtcbmRvY3VtZW50LndyaXRlKFwiTXkgd2lmZSdzIG5hbWUgaXMgR2FpbCBNYW5kcmFmaW5vXCIpOyJdLCJmaWxlIjoibWFpbi5qcyJ9

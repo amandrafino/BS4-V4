@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <title>Bootstrap 4 Layout</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.css">
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <link rel="stylesheet" href="dist/css/styles.css">
+</head>
+
+<body>
+  <!-- Start Here -->
+  <!-- Navbar -->
+	
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+       <a href="#" class="navbar-brand">Company Name</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" 
+       data-target="#navbarSupportedContent">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav ml-auto">
+           <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+           <li class="nav-item dropdown">
+              <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" class="nav-link dropdown-toggle">Dropdown Link</a>
+              <div class="dropdown-menu bg-primary">
+                <a href="#" class="dropdown-item text-white bg-hover">Action</a>
+                <a href="#" class="dropdown-item text-white bg-hover">Another Action</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item text-white bg-hover">Something Else</a>
+                <a href="#" class="dropdown-item text-white bg-hover">Something Else Again</a>
+              </div>
+            </li>
+           <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+           <li class="nav-item"><a href="#" class="nav-link">Connect</a></li>
+         </ul>
+        </div>
+      </div><!-- end ./container -->
+    </nav>
+
+    <!-- Hero -->
+    <div class="jumbrotron">
+      <div class="container">
+        <h1 class="display-4 text-center">Welcome to BS4-V4</h1>
+        <p class="lead">Start Building your new website using Bootstrap4. Fontawesome 
+        and google fonts are included.</p>
+        <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+      </div><!-- end ./container -->
+    </div>
+  
+
+
+  
+
+
+
+<!-- Scripts -->
+<script src="dist/js/jquery.min.js"></script>
+<script src="dist/js/popper.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="dist/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.js"></script>
+<script>
+  // Get Current Yr for copyright
+  $('#year').text(new Date().getFullYear());
+
+  // Init scrollspy
+  $('body').scrollspy({target: '#main-nav'});
+
+  // Smooth Scrolling
+  $("#main-nav a").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      const hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function() {
+        window.location.hash = hash;
+      });
+    }
+  });
+
+  // Configure Slider
+  $('.carousel').carousel({
+    interval: 5000,
+    pause: 'hover'
+  });
+
+  // Lightbox Init
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                  event.preventDefault();
+                  $(this).ekkoLightbox();
+              });
+
+  // Video Play Snippet
+  $(function () {
+    // Auto play modal video
+    $(".video").click(function () {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-video"),
+        videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal + ' button.close').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+    });
+  });
+
+</script>
+</body>
+</html>

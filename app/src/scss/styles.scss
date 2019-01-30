@@ -1,0 +1,43 @@
+// Variable Overrides | Modify Sass Variables and Maps
+/*
+  Variable defaults
+  Every Sass variable in Bootstrap 4 includes the !default flag. This allows you 
+  to override the variable’s default value in your own Sass, without modifying 
+  Bootstrap’s source code. 
+
+  Copy and paste variables as needed, modify their values, and remove the 
+  !default flag. 
+
+  If a variable has already been assigned, then it won’t be re-assigned by the 
+  default values in Bootstrap.
+
+  You will find the complete list of Bootstrap’s variables in 
+  scss/_variables.scss.
+
+  Variable overrides within the same Sass file can come before or after the 
+  default variables. 
+
+  >>> However, when overriding across Sass files, your overrides must come 
+  before you import Bootstrap’s Sass files.
+
+ */
+
+$theme-colors: (
+  "primary": steelblue
+);
+
+$body-bg: #FCFCFC;
+
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "nav";
+
+/* Styles Start Here */
+
+.jumbrotron {
+  padding: 40px;
+  border-top: 1px solid rgb(50,50,50);
+}
+
+
+
